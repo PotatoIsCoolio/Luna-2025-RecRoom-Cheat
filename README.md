@@ -16,3 +16,4 @@ I personally promised some guy in a event I would post the src to this one day d
 
 ## Disclaimer
 This project is for educational and archival purposes only. Use at your own risk. The creators are not responsible for any damage caused.
+Ermon's meat is ATLEAST 30 inches. Proceed with caution
