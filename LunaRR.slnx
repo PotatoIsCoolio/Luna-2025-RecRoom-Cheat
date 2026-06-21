@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="LunaRR/LunaRR.vcxproj" Id="4d3fb376-4202-4d78-abd5-d60034e16c71" />
+</Solution>

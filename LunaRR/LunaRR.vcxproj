@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{4d3fb376-4202-4d78-abd5-d60034e16c71}</ProjectGuid>
+    <RootNamespace>LunaRR</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;LUNARR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;LUNARR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;LUNARR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;LUNARR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)src\Cheat;$(ProjectDir)src\Dependencies\imgui;$(ProjectDir)src\Dependencies\imgui\backends;$(ProjectDir)src\Dependencies\kiero;$(ProjectDir)src\Dependencies\Luma;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Cheat\Globals.cpp" />
+    <ClCompile Include="src\Cheat\Lists.cpp" />
+    <ClCompile Include="src\Cheat\Managers\Players.cpp" />
+    <ClCompile Include="src\Cheat\Modules\Aimbot.cpp" />
+    <ClCompile Include="src\Cheat\Modules\Misc.cpp" />
+    <ClCompile Include="src\Cheat\Modules\Movement.cpp" />
+    <ClCompile Include="src\Cheat\Modules\Exclusive.cpp" />
+    <ClCompile Include="src\Cheat\Modules\Visuals.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\CameraSystem.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\GiftManager.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\GiftPackage.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\LocalPlayerController.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\Player.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\PlayerGameRoleManager.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\PlayerMovement.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\RangedWeapon.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\RRNetworking.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Game\ScreenPlayerController.cpp" />
+    <ClCompile Include="src\Cheat\SDK\SDK.cpp" />
+    <ClCompile Include="src\Cheat\SDK\System\Nullable.cpp" />
+    <ClCompile Include="src\Cheat\SDK\System\Type.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Unity\Camera.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Unity\Component.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Unity\GameObject.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Unity\Object.cpp" />
+    <ClCompile Include="src\Cheat\SDK\Unity\Transform.cpp" />
+    <ClCompile Include="src\Console\Console.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\imgui.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\imgui_stdlib.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\Dependencies\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\Dependencies\kiero\kiero.cpp" />
+    <ClCompile Include="src\Dependencies\kiero\minhook\src\buffer.c" />
+    <ClCompile Include="src\Dependencies\kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="src\Dependencies\kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="src\Dependencies\kiero\minhook\src\hook.c" />
+    <ClCompile Include="src\Dependencies\kiero\minhook\src\trampoline.c" />
+    <ClCompile Include="src\Dependencies\Luma\Deps\Memory.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Backend.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Invoker.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\LoadingCallback.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppArray.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppAssembly.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppClass.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppDomain.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppField.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppImage.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppMethod.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppObject.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppProperty.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppString.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppThread.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppType.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\Logger.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\Unity\Structures\Quaternion.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\Unity\Structures\Vector2.cpp" />
+    <ClCompile Include="src\Dependencies\Luma\Unity\Structures\Vector3.cpp" />
+    <ClCompile Include="src\GUI\Setup.cpp" />
+    <ClCompile Include="src\GUI\Render.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Cheat\Globals.h" />
+    <ClInclude Include="src\Cheat\Lists.h" />
+    <ClInclude Include="src\Cheat\Managers\Players.h" />
+    <ClInclude Include="src\Cheat\Modules\Aimbot.h" />
+    <ClInclude Include="src\Cheat\Modules\Misc.h" />
+    <ClInclude Include="src\Cheat\Modules\Movement.h" />
+    <ClInclude Include="src\Cheat\Modules\Exclusive.h" />
+    <ClInclude Include="src\Cheat\Modules\Visuals.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\CameraSystem.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\Empty\PlayerBody.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\Empty\PlayerHand.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\Empty\PlayerHead.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\Empty\RRNetworkBehavior.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\Empty\Tool.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\GiftManager.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\GiftPackage.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\LocalPlayerController.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\Player.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\PlayerGameRoleManager.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\PlayerMovement.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\RangedWeapon.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\RRNetworking.h" />
+    <ClInclude Include="src\Cheat\SDK\Game\ScreenPlayerController.h" />
+    <ClInclude Include="src\Cheat\SDK\SDK.h" />
+    <ClInclude Include="src\Cheat\SDK\System\Nullable.h" />
+    <ClInclude Include="src\Cheat\SDK\System\Type.h" />
+    <ClInclude Include="src\Cheat\SDK\Unity\Camera.h" />
+    <ClInclude Include="src\Cheat\SDK\Unity\Component.h" />
+    <ClInclude Include="src\Cheat\SDK\Unity\Empty\Behaviour.h" />
+    <ClInclude Include="src\Cheat\SDK\Unity\Empty\MonoBehaviour.h" />
+    <ClInclude Include="src\Cheat\SDK\Unity\GameObject.h" />
+    <ClInclude Include="src\Cheat\SDK\Unity\Object.h" />
+    <ClInclude Include="src\Cheat\SDK\Unity\Transform.h" />
+    <ClInclude Include="src\Console\colored_cout.h" />
+    <ClInclude Include="src\Console\Console.h" />
+    <ClInclude Include="src\Dependencies\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="src\Dependencies\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="src\Dependencies\imgui\imconfig.h" />
+    <ClInclude Include="src\Dependencies\imgui\imgui.h" />
+    <ClInclude Include="src\Dependencies\imgui\imgui_internal.h" />
+    <ClInclude Include="src\Dependencies\imgui\imgui_stdlib.h" />
+    <ClInclude Include="src\Dependencies\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\Dependencies\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\Dependencies\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\Dependencies\kiero\kiero.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\include\MinHook.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\src\buffer.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\src\hde\hde32.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\src\hde\hde64.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\src\hde\table32.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\src\hde\table64.h" />
+    <ClInclude Include="src\Dependencies\kiero\minhook\src\trampoline.h" />
+    <ClInclude Include="src\Dependencies\Luma\Deps\Memory.h" />
+    <ClInclude Include="src\Dependencies\Luma\Deps\RetSpoof.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Backend.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Invoker.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\LoadingCallback.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppArray.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppAssembly.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppClass.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppDomain.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppField.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppImage.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppMethod.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppObject.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppProperty.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppString.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppThread.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Structures\Il2CppType.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Symbols.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Wrappers\Class.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Wrappers\Field.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Wrappers\Method.h" />
+    <ClInclude Include="src\Dependencies\Luma\IL2CPP\Wrappers\Property.h" />
+    <ClInclude Include="src\Dependencies\Luma\Logger.h" />
+    <ClInclude Include="src\Dependencies\Luma\Luma.h" />
+    <ClInclude Include="src\Dependencies\Luma\Mono\Structures\Array.h" />
+    <ClInclude Include="src\Dependencies\Luma\Mono\Structures\Nullable.h" />
+    <ClInclude Include="src\Dependencies\Luma\Mono\Structures\String.h" />
+    <ClInclude Include="src\Dependencies\Luma\Settings.h" />
+    <ClInclude Include="src\Dependencies\Luma\Unity\Structures\Quaternion.h" />
+    <ClInclude Include="src\Dependencies\Luma\Unity\Structures\Vector2.h" />
+    <ClInclude Include="src\Dependencies\Luma\Unity\Structures\Vector3.h" />
+    <ClInclude Include="src\Dependencies\Luma\Unity\Unity.h" />
+    <ClInclude Include="src\GUI\Setup.h" />
+    <ClInclude Include="src\GUI\Render.h" />
+    <ClInclude Include="src\obf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\Dependencies\Luma\Deps\RetSpoof.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Dependencies\kiero\minhook\dll_resources\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\Dependencies\kiero\minhook\dll_resources\MinHook.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\Dependencies\Luma\Readme.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
