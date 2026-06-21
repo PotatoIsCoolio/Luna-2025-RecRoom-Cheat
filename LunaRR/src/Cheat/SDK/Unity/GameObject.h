@@ -1,0 +1,12 @@
+/*
+ALL OWNERSHIP GOES TO @Pillowguy._. & PotatoIsCool
+If you paid for this src you have been scammed.
+https://github.com/PotatoIsCoolio
+https://github.com/pillowman123
+*/
+#pragma once
+#include "Object.h"
+
+namespace SDK::Unity {
+	struct GameObject : Object {};
+}
